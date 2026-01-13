@@ -13,7 +13,7 @@ router.get('/test', (req, res) => {
     res.json(
         {
             success: true,
-            message: 'Auth is working'
+            message: 'Auth is working fine'
         }
     );
 });
