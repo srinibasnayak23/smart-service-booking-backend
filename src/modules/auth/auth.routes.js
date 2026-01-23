@@ -1,21 +1,17 @@
 // modules/auth/auth.routes.js
 const express = require('express');
 const authController = require('./auth.controller');
-const { success } = require('../../utils/response.util');
+const authMiddleware = require('../../middlewares/auth.middleware');
 
 const router = express.Router();
 
-// TODO: Uncomment when middleware is ready
-// router.post('/register', authController.register);
-// router.post('/login', authController.login);
-// router.post('/refresh-token', authController.refreshToken);
-router.get('/test', (req, res) => {
-    res.json(
-        {
-            success: true,
-            message: 'Auth is working fine'
-        }
-    );
-});
+// Public routes
+router.post('/register', authController.register);
+router.post('/login', authController.login);
+router.post('/refresh-token', authController.refreshToken);
+
+// Protected routes
+router.post('/logout', authMiddleware, authController.logout);
+router.get('/me', authMiddleware, authController.getCurrentUser);
 
 module.exports = router;
