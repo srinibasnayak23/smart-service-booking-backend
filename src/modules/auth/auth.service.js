@@ -3,6 +3,7 @@ const User = require('../../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
+
 class AuthService {
   // Validate email format
   validateEmail(email) {
