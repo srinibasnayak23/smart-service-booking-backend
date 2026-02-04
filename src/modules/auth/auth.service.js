@@ -44,8 +44,8 @@ class AuthService {
     }
 
     // Check if user already exists
-    //const existingUser = await User.findOne({ email: email.toLowerCase() });
-    const existingUser = false;
+    const existingUser = await User.findOne({ email: email.toLowerCase() });
+    //const existingUser = false;
     if (existingUser) {
       const error = new Error('User already exists with this email');
       error.statusCode = 409;

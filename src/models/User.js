@@ -43,6 +43,7 @@ const userSchema = new mongoose.Schema(
       },
       coordinates: {
         type: [Number], // [longitude, latitude]
+        default: [0, 0],
       },
     },
     address: String,
@@ -51,6 +52,6 @@ const userSchema = new mongoose.Schema(
 );
 
 // Create geospatial index
-userSchema.index({ location: '2dsphere' });
+//userSchema.index({ location: '2dsphere' });
 
 module.exports = mongoose.model('User', userSchema);
