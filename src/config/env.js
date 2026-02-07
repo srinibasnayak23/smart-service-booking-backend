@@ -7,7 +7,7 @@ const envConfig = {
   PORT: process.env.PORT || 3000,
 
   // Database
-  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/smart-service-booking',
+  MONGODB_URI: process.env.MONGODB_URI || 'mongodb+srv://devsrinibas_db_user:Ge85sJZgjBBQQuwA@freecluster.ju5itlx.mongodb.net/smart-service-booking',
   MONGODB_USER: process.env.MONGODB_USER,
   MONGODB_PASSWORD: process.env.MONGODB_PASSWORD,
 
