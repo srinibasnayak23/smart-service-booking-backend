@@ -1,0 +1,9 @@
+Demo user data for testing:
+{
+  "email": "testuser@example.com",
+  "password": "SecurePass123!",
+  "firstName": "John",
+  "lastName": "Doe",
+  "phone": "+91-9876543210",
+  "role": "admin"
+}
